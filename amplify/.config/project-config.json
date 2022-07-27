@@ -1,0 +1,17 @@
+{
+  "projectName": "amplifyworkshop",
+  "version": "3.1",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "none",
+    "config": {
+      "SourceDir": "src",
+      "DistributionDir": "public",
+      "BuildCommand": "hugo",
+      "StartCommand": "hugo server"
+    }
+  },
+  "providers": [
+    "awscloudformation"
+  ]
+}

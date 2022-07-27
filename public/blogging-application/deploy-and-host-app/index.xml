@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deploy and Host App on Amazon Lex Workshops</title>
+    <link>/blogging-application/deploy-and-host-app.html</link>
+    <description>Recent content in Deploy and Host App on Amazon Lex Workshops</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 20 Jul 2022 22:41:20 -0600</lastBuildDate><atom:link href="/blogging-application/deploy-and-host-app/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

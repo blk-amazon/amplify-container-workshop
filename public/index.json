@@ -1,0 +1,48 @@
+[
+	{	"pageTitle": "Index",
+		"relativePagePath": "/en/"
+	},
+	{
+		"pageTitle": "Introduction",
+		"relativePagePath": "/introduction.html"
+	},
+	{
+		"pageTitle": "Setup Dev Environment",
+		"relativePagePath": "/introduction/setup-environment.html"
+	},
+	{
+		"pageTitle": "Install Prerequisites",
+		"relativePagePath": "/introduction/install-prerequisites.html"
+	},
+	{
+		"pageTitle": "Setup Project",
+		"relativePagePath": "/introduction/setup-project.html"
+	},
+	{
+		"pageTitle": "Blogging Application",
+		"relativePagePath": "/blogging-application.html"
+	},
+	{
+		"pageTitle": "Create a GraphQL API and database",
+		"relativePagePath": "/blogging-application/create-api.html"
+	},
+	{
+		"pageTitle": "API with Server-Side Rendering (SSR)",
+		"relativePagePath": "/blogging-application/server-side-rendering.html"
+	},
+	{
+		"pageTitle": "API with Incremental Static Site Generation (SSG)",
+		"relativePagePath": "/blogging-application/incremental-static-site-generation.html"
+	},
+	{
+		"pageTitle": "Deploy and Host App",
+		"relativePagePath": "/blogging-application/deploy-and-host-app.html"
+	},
+	{
+		"pageTitle": "Authentication and access",
+		"relativePagePath": "/blogging-application/authentication.html"
+	},
+	{
+		"pageTitle": "Summary",
+		"relativePagePath": "/summary.html"
+	}]

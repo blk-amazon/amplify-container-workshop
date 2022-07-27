@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<html lang="en" class="js csstransforms3d">
+<head>
+  <meta charset="utf-8">
+  <meta property="og:title" content="Amazon Lex Workshops" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="generator" content="Hugo 0.83.1" />
+  <meta name="description" content="Amazon Lex Workshops">
+<meta name="author" content="Andrew Kane">
+
+  <link rel="shortcut icon" href="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico" type="image/ico" />
+<link rel="icon" href="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico" type="image/ico" />
+
+  <title>Deploy and Host App :: Amazon Lex Workshops</title>
+
+  
+  <link href="../css/nucleus.css" rel="stylesheet">
+  <link href="../css/fontawesome-all.min.css" rel="stylesheet">
+  <link href="../css/hybrid.css" rel="stylesheet">
+  <link href="../css/featherlight.min.css" rel="stylesheet">
+  <link href="../css/perfect-scrollbar.min.css" rel="stylesheet">
+  <link href="../css/auto-complete.css" rel="stylesheet">
+  <link href="../css/atom-one-dark-reasonable.css" rel="stylesheet">
+  <link href="../css/theme.css" rel="stylesheet">
+  <link href="../css/hugo-theme.css" rel="stylesheet">
+  
+  <link href="../css/theme-aws.css" rel="stylesheet">
+  
+
+  <script src="../js/jquery-3.3.1.min.js"></script>
+
+  <style>
+    :root #header + #content > #left > #rlblock_left{
+        display:none !important;
+    }
+    
+  </style>
+  
+</head>
+
+<body class="" data-url="../blogging-application/deploy-and-host-app.html">
+  <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <div>
+    <a href="../" title="Go home">
+        <img style="vertical-align:middle" src="../images/logo.png" height="70px" />
+    </a>
+</div>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../js/lunr.min.js"></script>
+<script type="text/javascript" src="../js/auto-complete.js"></script>
+<script type="text/javascript">
+    
+        var baseurl = "";
+    
+</script>
+<script type="text/javascript" src="../js/search.js"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction.html" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../introduction.html">
+          Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction/setup-environment.html" title="Setup Dev Environment" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../introduction/setup-environment.html">
+          Setup Dev Environment
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction/install-prerequisites.html" title="Install Prerequisites" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../introduction/install-prerequisites.html">
+          Install Prerequisites
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction/setup-project.html" title="Setup Project" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../introduction/setup-project.html">
+          Setup Project
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/blogging-application.html" title="Blogging Application" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="../blogging-application.html">
+          Blogging Application
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/blogging-application/create-api.html" title="Create a GraphQL API and database" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../blogging-application/create-api.html">
+          Create a GraphQL API and database
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/blogging-application/server-side-rendering.html" title="API with Server-Side Rendering (SSR)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../blogging-application/server-side-rendering.html">
+          API with Server-Side Rendering (SSR)
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/blogging-application/incremental-static-site-generation.html" title="API with Incremental Static Site Generation (SSG)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../blogging-application/incremental-static-site-generation.html">
+          API with Incremental Static Site Generation (SSG)
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/blogging-application/deploy-and-host-app.html" title="Deploy and Host App" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="../blogging-application/deploy-and-host-app.html">
+          Deploy and Host App
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/blogging-application/authentication.html" title="Authentication and access" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../blogging-application/authentication.html">
+          Authentication and access
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/summary.html" title="Summary" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../summary.html">
+          Summary
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3></h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="../credits.html"><i class='fas fa-bullhorn'></i> Workshop Credits</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <left>
+
+    <a href="https://aws.amazon.com/privacy/?nc1=f_pr">Privacy</a> | <a href="https://aws.amazon.com/terms/?nc1=f_pr">Site Terms</a> | © 2021, Amazon Web Services, Inc. or its affiliates. All rights reserved. 
+
+</left>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+  <section id="body">
+    <div id="overlay"></div>
+    <div class="padding highlightable">
+      
+      <div>
+        <div id="top-bar">
+          
+          
+          <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                <i class="fa fa-bars"></i>
+              </a>
+            </span>
+            
+            <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+            
+            <span class="links">
+              
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href='../'>AWS Amplify Workshop</a> > <a href='../blogging-application.html'>Blogging Application</a> > Deploy and Host App
+          
+          
+          
+          
+          
+          
+            </span>
+          </div>
+          
+          <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#add-hosting-to-your-app">Add hosting to your app</a></li>
+    <li><a href="#set-up-cicd-for-your-app">Set up CI/CD for your app</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+          
+        </div>
+      </div>
+      
+
+      
+        <div id="body-inner">
+          <h1>Deploy and Host App</h1>
+          
+          
+
+
+
+	<p>You&rsquo;ve successfully built an Amplify app with Next.js! Now that you&rsquo;ve built something, it&rsquo;s time to deploy it to the web with Amplify Console!</p>
+<h2 id="add-hosting-to-your-app">Add hosting to your app</h2>
+<p>You can deploy Next.js SSR apps with AWS Amplify&rsquo;s CI/CD and hosting service. In this guide we&rsquo;ll cover how to deploy and host your SSR web apps to quickly share with others.</p>
+<p>We&rsquo;re going to leverage Amplify&rsquo;s Continuous Deployment feature, which requires us to commit our project to a Git repository. For this workshop, we&rsquo;re going to use AWS CodeCommit, but you could also use other providers such as Github, Bitbucket, or Gitlab.</p>
+<p>First, navigate to the CodeCommit page within the AWS Console and click the orange <strong>Create repository</strong> button. Give your repository a name such as <code>nextamplified</code> and then click the orange <strong>Create</strong> button. This will create a Git repository that we can then use to commit our Next.js application to.</p>
+<p><img src="../images/codecommit-create-repo.gif" alt="CodeCommit Create Repository"></p>
+<p>Once your repository has been created, find the <strong>Clone URL</strong> dropdown at the top right corner of the repository page and select the <strong>Clone HTTPS</strong> option. This will copy the repository URL to your clipboard.</p>
+<p>Next, return to your Cloud9 environment and, first making sure that you are in the Next.js project folder, in the terminal type <code>git remote add origin [CodeCommit URL]</code>, replacing [CodeCommit URL] with the value your copied previously. This will add a new remote to your project&rsquo;s Git config.</p>
+<p>Once the remote has been added, we need to link it to the main branch in our CodeCommit repository and then push our code to the remote. We can do this in one step with the following command:</p>
+<!-- Before we commit our local changes and push them to our new CodeCommit repository, we need to update some Next.js config settings. Open the file **next.config.js** in your Cloud9 IDE and replace the contents with the following:
+
+:::code{language=javascript showLineNumbers=false showCopyAction=true}
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: false,
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+}
+
+module.exports = nextConfig
+::: -->
+<p>Now we&rsquo;re ready to push all of our updates to our repository.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add .
+git commit -m <span style="color:#e6db74">&#34;amplify workshop updates&#34;</span>
+git push --set-upstream origin main
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Enumerating objects: 19, <span style="color:#66d9ef">done</span>.
+Counting objects: 100% <span style="color:#f92672">(</span>19/19<span style="color:#f92672">)</span>, <span style="color:#66d9ef">done</span>.
+Delta compression using up to <span style="color:#ae81ff">2</span> threads
+Compressing objects: 100% <span style="color:#f92672">(</span>17/17<span style="color:#f92672">)</span>, <span style="color:#66d9ef">done</span>.
+Writing objects: 100% <span style="color:#f92672">(</span>19/19<span style="color:#f92672">)</span>, 63.32 KiB | 6.33 MiB/s, <span style="color:#66d9ef">done</span>.
+Total <span style="color:#ae81ff">19</span> <span style="color:#f92672">(</span>delta 0<span style="color:#f92672">)</span>, reused <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>delta 0<span style="color:#f92672">)</span>, pack-reused <span style="color:#ae81ff">0</span>
+To https://git-codecommit.us-east-1.amazonaws.com/v1/repos/AmplifyWorkshop
+ * <span style="color:#f92672">[</span>new branch<span style="color:#f92672">]</span>      main -&gt; main
+Branch <span style="color:#e6db74">&#39;main&#39;</span> set up to track remote branch <span style="color:#e6db74">&#39;main&#39;</span> from <span style="color:#e6db74">&#39;origin&#39;</span>.
+</code></pre></div><p>Our local project is now connected to our CodeCommit repository and we&rsquo;ve pushed our local changes to the remote repository. Now we can go ahead and create a CI/CD pipeline to build and deploy our application.</p>
+<h2 id="set-up-cicd-for-your-app">Set up CI/CD for your app</h2>
+<p>From the root of your project, run the following command and select the bolded options.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">amplify add hosting
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">✔ Select the plugin module to execute · Hosting with Amplify Console <span style="color:#f92672">(</span>Managed hosting with custom domains, Continuous deployment<span style="color:#f92672">)</span>
+? Choose a type Continuous deployment <span style="color:#f92672">(</span>Git-based deployments<span style="color:#f92672">)</span>
+? Continuous deployment is configured in the Amplify Console. Please hit enter once you connect your repository
+</code></pre></div><p>For now, we&rsquo;re going to host our application using the <strong>Hosting with Amplify Console</strong> option with <strong>Continuous deployment</strong>. In order to use Continuous deployment, we will need to connect our newly created repository to our Amplify project. To do this, navigate to the Amplify page in the AWS Console, and click on the card for our <strong>nextamplified</strong> project. From there, click on the <strong>Hosting environments</strong> tab and select <strong>AWS CodeCommit</strong> and then click the orange <strong>Connect branch</strong> button.</p>
+<p><img src="../images/amplify-connect-branch.png" alt="Amplify Connect Branch"></p>
+<p>On the next page, use the dropdown to select our repository and then in the <strong>Branch</strong> dropdown, select <strong>main</strong> and then click the orange <strong>Next</strong> button.</p>
+<p>On the <strong>Configure build settings</strong> page, select <strong>dev</strong> from the Environment dropdown to link it with the proper Amplify environment, as Amplify supports creating any number of environments for development, testing, production, etc.</p>
+<p>Amplify Hosting requires a service role with the proper permissions. Since we don&rsquo;t have one, we can have Amplify create it for us by clicking the <strong>Create new role</strong> button, which will open a new browser window to the IAM service page wizard for creating a new service role. All configurations will already be pre-populated, so just continue to click the blue buttons at the bottom of the screen until you reach the <strong>Review</strong> page.</p>
+<p><img src="../images/amplify-service-role.png" alt="Amplify Create Service Role"></p>
+<p>Confirm that all the settings look correct, then click the blue <strong>Create role</strong> button. Close that window to return to the Amplify page and click the refresh button next to the service role dropdown. Select the newly created <strong>amplifyconsole-backend-role</strong> role from the dropdown, then click the orange <strong>Next</strong> button at the bottom of the page.</p>
+<p><img src="../images/amplify-connect-branch-review.png" alt="Amplify Connect Branch Review"></p>
+<p>Review your configuration and if satisfied, click the orange <strong>Save and deploy</strong> button. This will kick off a build and deploy of our application.</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../blogging-application/incremental-static-site-generation.html" title="API with Incremental Static Site Generation (SSG)"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="../blogging-application/authentication.html" title="Authentication and access" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../js/clipboard.min.js"></script>
+    <script src="../js/perfect-scrollbar.min.js"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../js/jquery.sticky.js"></script>
+    <script src="../js/featherlight.min.js"></script>
+    <script src="../js/html5shiv-printshiv.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../js/modernizr.custom-3.6.0.js"></script>
+    <script src="../js/learn.js"></script>
+    <script src="../js/hugo-learn.js"></script>
+
+    <link href="../mermaid/mermaid.css" rel="stylesheet" />
+    <script src="../mermaid/mermaid.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <div id = 'kinesisStreamName' title = ""/></div>
+<div id = 'cognitoPoolId' title = ""/></div>
+<div id = 'awsRegion' title = ""/></div>
+<div id = 'contentId' title = ""/></div>
+<div id = 'language' title = "en"/></div>
+<div id = 'versions' title = ""/></div>
+
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+<script src="../js/kinesis.js"></script>
+  </body>
+</html>

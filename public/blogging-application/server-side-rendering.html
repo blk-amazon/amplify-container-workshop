@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<html lang="en" class="js csstransforms3d">
+<head>
+  <meta charset="utf-8">
+  <meta property="og:title" content="Amazon Lex Workshops" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="generator" content="Hugo 0.83.1" />
+  <meta name="description" content="Amazon Lex Workshops">
+<meta name="author" content="Andrew Kane">
+
+  <link rel="shortcut icon" href="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico" type="image/ico" />
+<link rel="icon" href="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico" type="image/ico" />
+
+  <title>API with Server-Side Rendering (SSR) :: Amazon Lex Workshops</title>
+
+  
+  <link href="../css/nucleus.css" rel="stylesheet">
+  <link href="../css/fontawesome-all.min.css" rel="stylesheet">
+  <link href="../css/hybrid.css" rel="stylesheet">
+  <link href="../css/featherlight.min.css" rel="stylesheet">
+  <link href="../css/perfect-scrollbar.min.css" rel="stylesheet">
+  <link href="../css/auto-complete.css" rel="stylesheet">
+  <link href="../css/atom-one-dark-reasonable.css" rel="stylesheet">
+  <link href="../css/theme.css" rel="stylesheet">
+  <link href="../css/hugo-theme.css" rel="stylesheet">
+  
+  <link href="../css/theme-aws.css" rel="stylesheet">
+  
+
+  <script src="../js/jquery-3.3.1.min.js"></script>
+
+  <style>
+    :root #header + #content > #left > #rlblock_left{
+        display:none !important;
+    }
+    
+  </style>
+  
+</head>
+
+<body class="" data-url="../blogging-application/server-side-rendering.html">
+  <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <div>
+    <a href="../" title="Go home">
+        <img style="vertical-align:middle" src="../images/logo.png" height="70px" />
+    </a>
+</div>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../js/lunr.min.js"></script>
+<script type="text/javascript" src="../js/auto-complete.js"></script>
+<script type="text/javascript">
+    
+        var baseurl = "";
+    
+</script>
+<script type="text/javascript" src="../js/search.js"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction.html" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../introduction.html">
+          Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction/setup-environment.html" title="Setup Dev Environment" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../introduction/setup-environment.html">
+          Setup Dev Environment
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction/install-prerequisites.html" title="Install Prerequisites" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../introduction/install-prerequisites.html">
+          Install Prerequisites
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction/setup-project.html" title="Setup Project" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../introduction/setup-project.html">
+          Setup Project
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/blogging-application.html" title="Blogging Application" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="../blogging-application.html">
+          Blogging Application
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/blogging-application/create-api.html" title="Create a GraphQL API and database" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../blogging-application/create-api.html">
+          Create a GraphQL API and database
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/blogging-application/server-side-rendering.html" title="API with Server-Side Rendering (SSR)" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="../blogging-application/server-side-rendering.html">
+          API with Server-Side Rendering (SSR)
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/blogging-application/incremental-static-site-generation.html" title="API with Incremental Static Site Generation (SSG)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../blogging-application/incremental-static-site-generation.html">
+          API with Incremental Static Site Generation (SSG)
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/blogging-application/deploy-and-host-app.html" title="Deploy and Host App" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../blogging-application/deploy-and-host-app.html">
+          Deploy and Host App
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/blogging-application/authentication.html" title="Authentication and access" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../blogging-application/authentication.html">
+          Authentication and access
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/summary.html" title="Summary" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../summary.html">
+          Summary
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3></h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="../credits.html"><i class='fas fa-bullhorn'></i> Workshop Credits</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <left>
+
+    <a href="https://aws.amazon.com/privacy/?nc1=f_pr">Privacy</a> | <a href="https://aws.amazon.com/terms/?nc1=f_pr">Site Terms</a> | © 2021, Amazon Web Services, Inc. or its affiliates. All rights reserved. 
+
+</left>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+  <section id="body">
+    <div id="overlay"></div>
+    <div class="padding highlightable">
+      
+      <div>
+        <div id="top-bar">
+          
+          
+          <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                <i class="fa fa-bars"></i>
+              </a>
+            </span>
+            
+            <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+            
+            <span class="links">
+              
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href='../'>AWS Amplify Workshop</a> > <a href='../blogging-application.html'>Blogging Application</a> > API with Server-Side Rendering (SSR)
+          
+          
+          
+          
+          
+          
+            </span>
+          </div>
+          
+          <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#testing-ssr">Testing SSR</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+          
+        </div>
+      </div>
+      
+
+      
+        <div id="body-inner">
+          <h1>API with Server-Side Rendering (SSR)</h1>
+          
+          
+
+
+
+	<p>In this section you will create a way to list and create posts from the Next.js application. To do this, you will fetch &amp; render the latest posts from the server as well as create a new post on the client.</p>
+<p>Open pages/index.js and replace it with the following code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// pages/index.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react&#39;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Amplify</span>, <span style="color:#a6e22e">API</span>, <span style="color:#a6e22e">withSSRContext</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;aws-amplify&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Head</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;next/head&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">awsExports</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;../src/aws-exports&#39;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">createPost</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;../src/graphql/mutations&#39;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">listPosts</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;../src/graphql/queries&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">styles</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;../styles/Home.module.css&#39;</span>;
+
+<span style="color:#a6e22e">Amplify</span>.<span style="color:#a6e22e">configure</span>({ ...<span style="color:#a6e22e">awsExports</span>, <span style="color:#a6e22e">ssr</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> });
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getServerSideProps</span>({ <span style="color:#a6e22e">req</span> }) {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">SSR</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">withSSRContext</span>({ <span style="color:#a6e22e">req</span> });
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">SSR</span>.<span style="color:#a6e22e">API</span>.<span style="color:#a6e22e">graphql</span>({ <span style="color:#a6e22e">query</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">listPosts</span> });
+
+  <span style="color:#66d9ef">return</span> {
+    <span style="color:#a6e22e">props</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">posts</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">listPosts</span>.<span style="color:#a6e22e">items</span>
+    }
+  };
+}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Home</span>(<span style="color:#a6e22e">props</span>) {
+  <span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">posts</span>, <span style="color:#a6e22e">setPosts</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">useState</span>(<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">posts</span> <span style="color:#f92672">||</span> []);
+  
+  <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">handleCreatePost</span>(<span style="color:#a6e22e">event</span>) {
+    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">preventDefault</span>();
+  
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">form</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">FormData</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span>);
+  
+    <span style="color:#66d9ef">try</span> {
+      <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">data</span> } <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">API</span>.<span style="color:#a6e22e">graphql</span>({
+        <span style="color:#a6e22e">query</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">createPost</span>,
+        <span style="color:#a6e22e">variables</span><span style="color:#f92672">:</span> {
+          <span style="color:#a6e22e">input</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">form</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;title&#39;</span>),
+            <span style="color:#a6e22e">content</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">form</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;content&#39;</span>)
+          }
+        }
+      });
+      <span style="color:#75715e">// console.log(data);
+</span><span style="color:#75715e"></span>      
+      <span style="color:#a6e22e">setPosts</span>([
+        ...<span style="color:#a6e22e">posts</span>,
+        <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">createPost</span>
+      ]);
+  
+    } <span style="color:#66d9ef">catch</span> ({ <span style="color:#a6e22e">errors</span> }) {
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(...<span style="color:#a6e22e">errors</span>);
+      <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error(<span style="color:#a6e22e">errors</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">message</span>);
+    }
+  }
+
+  <span style="color:#66d9ef">return</span> (
+    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">styles</span>.<span style="color:#a6e22e">container</span>}<span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Head</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">title</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Amplify</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">Next</span>.<span style="color:#a6e22e">js</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/title&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;icon&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/favicon.ico&#34;</span> <span style="color:#f92672">/&gt;</span>
+      <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/Head&gt;</span>
+
+      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">main</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">styles</span>.<span style="color:#a6e22e">main</span>}<span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">styles</span>.<span style="color:#a6e22e">title</span>}<span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Amplify</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">Next</span>.<span style="color:#a6e22e">js</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h1&gt;</span>
+
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">p</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">styles</span>.<span style="color:#a6e22e">description</span>}<span style="color:#f92672">&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">code</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">styles</span>.<span style="color:#a6e22e">code</span>}<span style="color:#f92672">&gt;</span>{<span style="color:#a6e22e">posts</span>.<span style="color:#a6e22e">length</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/code&gt;</span>
+          <span style="color:#a6e22e">posts</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/p&gt;</span>
+
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">styles</span>.<span style="color:#a6e22e">grid</span>}<span style="color:#f92672">&gt;</span>
+          {<span style="color:#a6e22e">posts</span>.<span style="color:#a6e22e">map</span>((<span style="color:#a6e22e">post</span>) =&gt; (
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">a</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">styles</span>.<span style="color:#a6e22e">card</span>} <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span>{<span style="color:#e6db74">`/posts/</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">post</span>.<span style="color:#a6e22e">id</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>} <span style="color:#a6e22e">key</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">post</span>.<span style="color:#a6e22e">id</span>}<span style="color:#f92672">&gt;</span>
+              <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h3</span><span style="color:#f92672">&gt;</span>{<span style="color:#a6e22e">post</span>.<span style="color:#a6e22e">title</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h3&gt;</span>
+              <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">p</span><span style="color:#f92672">&gt;</span>{<span style="color:#a6e22e">post</span>.<span style="color:#a6e22e">content</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/p&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/a&gt;</span>
+          ))}
+
+          <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">styles</span>.<span style="color:#a6e22e">card</span>}<span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h3</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">styles</span>.<span style="color:#a6e22e">title</span>}<span style="color:#f92672">&gt;</span><span style="color:#a6e22e">New</span> <span style="color:#a6e22e">Post</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h3&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">form</span> <span style="color:#a6e22e">onSubmit</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">handleCreatePost</span>}<span style="color:#f92672">&gt;</span>
+              <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">fieldset</span><span style="color:#f92672">&gt;</span>
+                <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">legend</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Title</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/legend&gt;</span>
+                <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">input</span>
+                  <span style="color:#a6e22e">defaultValue</span><span style="color:#f92672">=</span>{<span style="color:#e6db74">`Today, </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">new</span> Date().<span style="color:#a6e22e">toLocaleTimeString</span>()<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>}
+                  <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>
+                <span style="color:#f92672">/&gt;</span>
+              <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/fieldset&gt;</span>
+
+              <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">fieldset</span><span style="color:#f92672">&gt;</span>
+                <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">legend</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Content</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/legend&gt;</span>
+                <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">textarea</span>
+                  <span style="color:#a6e22e">defaultValue</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;I built an Amplify app with Next.js!&#34;</span>
+                  <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;content&#34;</span>
+                <span style="color:#f92672">/&gt;</span>
+              <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/fieldset&gt;</span>
+
+              <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">button</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Create</span> <span style="color:#a6e22e">Post</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/button&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/form&gt;</span>
+          <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;</span>
+      <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/main&gt;</span>
+    <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;</span>
+  );
+}
+</code></pre></div><p>Let&rsquo;s walk through some of this file:</p>
+<ul>
+<li>
+<p><strong>Amplify.configure</strong> – For authenticated requests to work on the server, our client has to be configured with ssr: true to make credentials available on subsequent requests.</p>
+</li>
+<li>
+<p><strong>getServerSideProps</strong> – For each request (req) on the server, we create a copy of Amplify (called SSR here from withSSRContext({ req })) that scopes credentials, data, and storage to just one request. API.graphql queries for a list of posts, and returns them as the posts prop for the Home component.</p>
+</li>
+<li>
+<p><strong>handleCreatePost</strong> – This function is called when a logged-in user submits our &ldquo;New Post&rdquo; form. API.graphql is called to create the new post&rsquo;s title and content.</p>
+</li>
+<li>
+<p><strong>Home</strong> – This is a functional component that renders the posts provided by getServerSideProps.</p>
+</li>
+</ul>
+<h2 id="testing-ssr">Testing SSR</h2>
+<p>Next, run the app and you should see a landing page with 0 posts with a login screen:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm run dev
+</code></pre></div><p>You can now use the <strong>Preview Running Application</strong> feature that we saw earlier to see your updated application.</p>
+<p>In the application window, you should see a form titled <strong>New Post</strong> that will enable you to begin authoring new blog posts. After you&rsquo;ve created some entries, you may have noticed that clicking on one of the blog cards displays a 404 error. That&rsquo;s because, thus far, we&rsquo;ve been working strictly with statically generated content. We&rsquo;ll see how to address this issue in the next section.</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../blogging-application/create-api.html" title="Create a GraphQL API and database"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="../blogging-application/incremental-static-site-generation.html" title="API with Incremental Static Site Generation (SSG)" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../js/clipboard.min.js"></script>
+    <script src="../js/perfect-scrollbar.min.js"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../js/jquery.sticky.js"></script>
+    <script src="../js/featherlight.min.js"></script>
+    <script src="../js/html5shiv-printshiv.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../js/modernizr.custom-3.6.0.js"></script>
+    <script src="../js/learn.js"></script>
+    <script src="../js/hugo-learn.js"></script>
+
+    <link href="../mermaid/mermaid.css" rel="stylesheet" />
+    <script src="../mermaid/mermaid.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <div id = 'kinesisStreamName' title = ""/></div>
+<div id = 'cognitoPoolId' title = ""/></div>
+<div id = 'awsRegion' title = ""/></div>
+<div id = 'contentId' title = ""/></div>
+<div id = 'language' title = "en"/></div>
+<div id = 'versions' title = ""/></div>
+
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+<script src="../js/kinesis.js"></script>
+  </body>
+</html>

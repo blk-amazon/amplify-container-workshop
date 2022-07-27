@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<html lang="en" class="js csstransforms3d">
+<head>
+  <meta charset="utf-8">
+  <meta property="og:title" content="Amazon Lex Workshops" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="generator" content="Hugo 0.83.1" />
+  <meta name="description" content="Amazon Lex Workshops">
+<meta name="author" content="Andrew Kane">
+
+  <link rel="shortcut icon" href="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico" type="image/ico" />
+<link rel="icon" href="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico" type="image/ico" />
+
+  <title>Create a GraphQL API and database :: Amazon Lex Workshops</title>
+
+  
+  <link href="../css/nucleus.css" rel="stylesheet">
+  <link href="../css/fontawesome-all.min.css" rel="stylesheet">
+  <link href="../css/hybrid.css" rel="stylesheet">
+  <link href="../css/featherlight.min.css" rel="stylesheet">
+  <link href="../css/perfect-scrollbar.min.css" rel="stylesheet">
+  <link href="../css/auto-complete.css" rel="stylesheet">
+  <link href="../css/atom-one-dark-reasonable.css" rel="stylesheet">
+  <link href="../css/theme.css" rel="stylesheet">
+  <link href="../css/hugo-theme.css" rel="stylesheet">
+  
+  <link href="../css/theme-aws.css" rel="stylesheet">
+  
+
+  <script src="../js/jquery-3.3.1.min.js"></script>
+
+  <style>
+    :root #header + #content > #left > #rlblock_left{
+        display:none !important;
+    }
+    
+  </style>
+  
+</head>
+
+<body class="" data-url="../blogging-application/create-api.html">
+  <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <div>
+    <a href="../" title="Go home">
+        <img style="vertical-align:middle" src="../images/logo.png" height="70px" />
+    </a>
+</div>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../js/lunr.min.js"></script>
+<script type="text/javascript" src="../js/auto-complete.js"></script>
+<script type="text/javascript">
+    
+        var baseurl = "";
+    
+</script>
+<script type="text/javascript" src="../js/search.js"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction.html" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../introduction.html">
+          Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction/setup-environment.html" title="Setup Dev Environment" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../introduction/setup-environment.html">
+          Setup Dev Environment
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction/install-prerequisites.html" title="Install Prerequisites" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../introduction/install-prerequisites.html">
+          Install Prerequisites
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction/setup-project.html" title="Setup Project" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../introduction/setup-project.html">
+          Setup Project
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/blogging-application.html" title="Blogging Application" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="../blogging-application.html">
+          Blogging Application
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/blogging-application/create-api.html" title="Create a GraphQL API and database" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="../blogging-application/create-api.html">
+          Create a GraphQL API and database
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/blogging-application/server-side-rendering.html" title="API with Server-Side Rendering (SSR)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../blogging-application/server-side-rendering.html">
+          API with Server-Side Rendering (SSR)
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/blogging-application/incremental-static-site-generation.html" title="API with Incremental Static Site Generation (SSG)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../blogging-application/incremental-static-site-generation.html">
+          API with Incremental Static Site Generation (SSG)
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/blogging-application/deploy-and-host-app.html" title="Deploy and Host App" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../blogging-application/deploy-and-host-app.html">
+          Deploy and Host App
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/blogging-application/authentication.html" title="Authentication and access" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../blogging-application/authentication.html">
+          Authentication and access
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/summary.html" title="Summary" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../summary.html">
+          Summary
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3></h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="../credits.html"><i class='fas fa-bullhorn'></i> Workshop Credits</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <left>
+
+    <a href="https://aws.amazon.com/privacy/?nc1=f_pr">Privacy</a> | <a href="https://aws.amazon.com/terms/?nc1=f_pr">Site Terms</a> | © 2021, Amazon Web Services, Inc. or its affiliates. All rights reserved. 
+
+</left>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+  <section id="body">
+    <div id="overlay"></div>
+    <div class="padding highlightable">
+      
+      <div>
+        <div id="top-bar">
+          
+          
+          <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                <i class="fa fa-bars"></i>
+              </a>
+            </span>
+            
+            <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+            
+            <span class="links">
+              
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href='../'>AWS Amplify Workshop</a> > <a href='../blogging-application.html'>Blogging Application</a> > Create a GraphQL API and database
+          
+          
+          
+          
+          
+          
+            </span>
+          </div>
+          
+          <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#deploying-the-api">Deploying the API</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+          
+        </div>
+      </div>
+      
+
+      
+        <div id="body-inner">
+          <h1>Create a GraphQL API and database</h1>
+          
+          
+
+
+
+	<p>Add a GraphQL API to your app and automatically provision a database by running the following command from the root of your application directory:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">amplify add api
+</code></pre></div><p>Select the explicit values below to enable <strong>API key</strong> for public create, read, update, and delete access. We&rsquo;ll add authentication later and update these  permissions to provide more controlled access.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">? Select from one of the below mentioned services: GraphQL
+? Here is the GraphQL API that we will create. Select a setting to edit or conti
+nue Continue
+? Choose a schema template: Single object with fields <span style="color:#f92672">(</span>e.g., “Todo” with ID, nam
+e, description<span style="color:#f92672">)</span>
+
+⚠️  WARNING: your GraphQL API currently allows public create, read, update, and delete access to all models via an API Key. To configure PRODUCTION-READY authorization rules, review: https://docs.amplify.aws/cli/graphql/authorization-rules
+
+✅ GraphQL schema compiled successfully.
+
+Edit your schema at /home/ec2-user/environment/next-amplified/amplify/backend/api/nextamplified/schema.graphql or place .graphql files in a directory at /home/ec2-user/environment/next-amplified/amplify/backend/api/nextamplified/schema
+✔ Do you want to edit the schema now? <span style="color:#f92672">(</span>Y/n<span style="color:#f92672">)</span> · no
+✅ Successfully added resource nextamplified locally
+
+✅ Some next steps:
+<span style="color:#e6db74">&#34;amplify push&#34;</span> will build all your local backend resources and provision it in the cloud
+<span style="color:#e6db74">&#34;amplify publish&#34;</span> will build all your local backend and frontend resources <span style="color:#f92672">(</span><span style="color:#66d9ef">if</span> you have hosting category added<span style="color:#f92672">)</span> and provision it in the cloud
+</code></pre></div><p>Notice that we responded <strong>no</strong> to the question &ldquo;Do you want to edit the schema now?&rdquo; This is because the Amplify CLI is not currently able to open files in the Cloud9 IDE, which is what we will want to do to edit the GraphQL schema in the next step.</p>
+<p>On the left hand side of the Cloud9 IDE, locate the file browser and navigate to the file <strong>amplify/backend/api/nextamplified/schema.graphql</strong></p>
+<p><img src="../images/cloud9-graphql-api-schema.png" alt="Cloud9 GraphQL API Schema"></p>
+<p>Replace the example Todo model in the schema with the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-graphql" data-lang="graphql"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Post</span>
+  <span style="color:#a6e22e">@model</span>
+  <span style="color:#a6e22e">@auth</span>(rules: [{ <span style="color:#a6e22e">allow</span>: <span style="color:#a6e22e">public</span>, operations: [<span style="color:#a6e22e">create</span>, read, update, delete] }]) {
+  id: <span style="color:#a6e22e">ID</span>!
+  title: <span style="color:#a6e22e">String</span>!
+  content: <span style="color:#a6e22e">String</span>!
+}
+</code></pre></div><p>This schema defines a Post model for our blog app. You&rsquo;ll notice a directive on the Post type of @model, which is part of the GraphQL transform library of Amplify and provides custom directives you can use in your schema that allow you to do things like define data models, set up authentication and authorization rules, configure serverless functions as resolvers, and more.</p>
+<p>A type decorated with the @model directive will scaffold out the database table for the type (Post table), the schema for CRUD (create, read, update, delete) and list operations, and the GraphQL resolvers needed to make everything work together.</p>
+<p>You&rsquo;ll notice that for the @auth directive, we&rsquo;re granting full CRUD capabilities for public access. We&rsquo;ll update this later to make it a little more secure by incorporating authentication and user level access controls.</p>
+<h2 id="deploying-the-api">Deploying the API</h2>
+<p>To deploy this backend, run the <code>push</code> command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">amplify push
+</code></pre></div><p>When prompted with &ldquo;Are you sure you want to continue?&rdquo; respond with <strong>Yes</strong> to continue.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">⠇ Fetching updates to backend environment: dev from the cloud.
+⚠️  WARNING: your GraphQL API currently allows public create, read, update, and delete access to all models via an API Key. To configure PRODUCTION-READY authorization rules, review: https://docs.amplify.aws/cli/graphql/authorization-rules
+
+✅ GraphQL schema compiled successfully.
+
+Edit your schema at /home/ec2-user/environment/next-amplified/amplify/backend/api/nextamplified/schema.graphql or place .graphql files in a directory at /home/ec2-user/environment/next-amplified/amplify/backend/api/nextamplified/schema
+✔ Successfully pulled backend environment dev from the cloud.
+⠋ Building resource api/nextamplified
+⚠️  WARNING: your GraphQL API currently allows public create, read, update, and delete access to all models via an API Key. To configure PRODUCTION-READY authorization rules, review: https://docs.amplify.aws/cli/graphql/authorization-rules
+
+⠙ Building resource api/nextamplified✅ GraphQL schema compiled successfully.
+
+Edit your schema at /home/ec2-user/environment/next-amplified/amplify/backend/api/nextamplified/schema.graphql or place .graphql files in a directory at /home/ec2-user/environment/next-amplified/amplify/backend/api/nextamplified/schema
+
+&gt; Current Environment: dev
+    
+┌──────────┬───────────────┬───────────┬───────────────────┐
+│ Category │ Resource name │ Operation │ Provider plugin   │
+├──────────┼───────────────┼───────────┼───────────────────┤
+│ Api      │ nextamplified │ Create    │ awscloudformation │
+└──────────┴───────────────┴───────────┴───────────────────┘
+? Are you sure you want to <span style="color:#66d9ef">continue</span>? Yes
+
+⚠️  WARNING: your GraphQL API currently allows public create, read, update, and delete access to all models via an API Key. To configure PRODUCTION-READY authorization rules, review: https://docs.amplify.aws/cli/graphql/authorization-rules
+
+✅ GraphQL schema compiled successfully.
+
+Edit your schema at /home/ec2-user/environment/next-amplified/amplify/backend/api/nextamplified/schema.graphql or place .graphql files in a directory at /home/ec2-user/environment/next-amplified/amplify/backend/api/nextamplified/schema
+⠋ Building resource api/nextamplified
+⚠️  WARNING: your GraphQL API currently allows public create, read, update, and delete access to all models via an API Key. To configure PRODUCTION-READY authorization rules, review: https://docs.amplify.aws/cli/graphql/authorization-rules
+
+✅ GraphQL schema compiled successfully.
+
+Edit your schema at /home/ec2-user/environment/next-amplified/amplify/backend/api/nextamplified/schema.graphql or place .graphql files in a directory at /home/ec2-user/environment/next-amplified/amplify/backend/api/nextamplified/schema
+? Do you want to generate code <span style="color:#66d9ef">for</span> your newly created GraphQL API Yes
+? Choose the code generation language target javascript
+? Enter the file name pattern of graphql queries, mutations and subscriptions src/graphql/**/*.js
+? Do you want to generate/update all possible GraphQL operations - queries, mutations and subscriptions Yes
+? Enter maximum statement depth <span style="color:#f92672">[</span>increase from default <span style="color:#66d9ef">if</span> your schema is deeply nested<span style="color:#f92672">]</span> <span style="color:#ae81ff">2</span>
+
+...
+
+✔ Generated GraphQL operations successfully and saved at src/graphql
+✔ All resources are updated in the cloud
+</code></pre></div><p>During the <code>push</code>, the Amplify CLI will ask you some questions about your GraphQL setup and how you want it to work with the generated files locally. You can accept the defaults, but let&rsquo;s look at what each of them represent.</p>
+<p><strong>Do you want to generate code for your newly created GraphQL API Yes</strong></p>
+<p>When we created the schema, we did so using the GraphQL transform library of Amplify, which allows us to specify the structure and features of our schema. This question will allow Amplify to then convert that into code that you can actually import into your project, so that you can more easily work with the generated resources.</p>
+<p><strong>Choose the code generation language target javascript</strong></p>
+<p>This option specifies which language you want the generated code to be in. Options include javascript, typescript,</p>
+<p><strong>Enter the file name pattern of graphql queries, mutations and subscriptions src/graphql/**/*.js</strong></p>
+<p>This option specifies the location of file name pattern for the files generated during the code generation step. You can update this for your specific needs, but the default is usually fine in most cases.</p>
+<p><strong>Do you want to generate/update all possible GraphQL operations - queries, mutations and subscriptions Yes</strong></p>
+<p>This just specifies whether you want to generate all or part of the code. For most operations, you can rebuild everything, but for very large schemas, you may select just the GraphQL operations that were changed to optimize code generation time.</p>
+<p><strong>Enter maximum statement depth [increase from default if your schema is deeply nested] 2</strong></p>
+<p>This refers to the depth the generated code will work with your schema. For example, if I have a model with a nested model, which also has a nested model, I would have a depth of 3, but if I specify 2 for my depth, I won&rsquo;t be able to work with the third level during operations on the top level.</p>
+<p>Now the API is live and you can start interacting with it!</p>
+<p>The API you have deployed includes operations for creating, reading, updating, deleting, and listing posts.</p>
+<p>Next, run the following command to check Amplify&rsquo;s status:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">amplify status
+</code></pre></div><p>This will give us the current status of the Amplify project, including the current environment, any categories that have been created, and what state those categories are in. It should look similar to this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; Current Environment: dev
+    
+┌──────────┬───────────────┬───────────┬───────────────────┐
+│ Category │ Resource name │ Operation │ Provider plugin   │
+├──────────┼───────────────┼───────────┼───────────────────┤
+│ Api      │ nextamplified │ No Change │ awscloudformation │
+└──────────┴───────────────┴───────────┴───────────────────┘
+</code></pre></div><p>To view the GraphQL API in the AppSync console at any time, run the following command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">amplify console api
+</code></pre></div><p>To view your entire app in the Amplify console at any time, run the following command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">amplify console
+</code></pre></div>
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../blogging-application.html" title="Blogging Application"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="../blogging-application/server-side-rendering.html" title="API with Server-Side Rendering (SSR)" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../js/clipboard.min.js"></script>
+    <script src="../js/perfect-scrollbar.min.js"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../js/jquery.sticky.js"></script>
+    <script src="../js/featherlight.min.js"></script>
+    <script src="../js/html5shiv-printshiv.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../js/modernizr.custom-3.6.0.js"></script>
+    <script src="../js/learn.js"></script>
+    <script src="../js/hugo-learn.js"></script>
+
+    <link href="../mermaid/mermaid.css" rel="stylesheet" />
+    <script src="../mermaid/mermaid.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <div id = 'kinesisStreamName' title = ""/></div>
+<div id = 'cognitoPoolId' title = ""/></div>
+<div id = 'awsRegion' title = ""/></div>
+<div id = 'contentId' title = ""/></div>
+<div id = 'language' title = "en"/></div>
+<div id = 'versions' title = ""/></div>
+
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+<script src="../js/kinesis.js"></script>
+  </body>
+</html>

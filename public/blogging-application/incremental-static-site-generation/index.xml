@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>API with Incremental Static Site Generation (SSG) on Amazon Lex Workshops</title>
+    <link>/blogging-application/incremental-static-site-generation.html</link>
+    <description>Recent content in API with Incremental Static Site Generation (SSG) on Amazon Lex Workshops</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 20 Jul 2022 22:41:35 -0600</lastBuildDate><atom:link href="/blogging-application/incremental-static-site-generation/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

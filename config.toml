@@ -1,0 +1,51 @@
+RelativeURLs=true
+CanonifyURLs=true
+languageCode = "en-US"
+defaultContentLanguage = "en"
+
+title = "Amazon Lex Workshops"
+theme = "learn"
+metaDataFormat = "yaml"
+defaultContentLanguageInSubdir= false
+
+uglyurls = true
+sectionPagesMenu = "main"
+pygmentsCodeFences = true
+pygmentsStyle = "monokai"
+
+[params]
+  editURL = ""
+  author = "Andrew Kane"
+  description = "Amazon Lex Workshops"
+  showVisitedLinks = false
+  disableSearch = false
+  disableAssetsBusting = true
+  disableInlineCopyToClipBoard = false
+  disableShortcutsTitle = true
+  disableLanguageSwitchingButton = false
+  disableBreadcrumb = false
+  disableNextPrev = false
+  ordersectionsby = "weight"
+  themeVariant = "aws"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[Languages]
+
+[Languages.en]
+title = "Amazon Lex Workshops"
+weight = 1
+languageName = "English"
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-bullhorn'></i> Workshop Credits"
+url = "/credits.html"
+weight = 30
+
