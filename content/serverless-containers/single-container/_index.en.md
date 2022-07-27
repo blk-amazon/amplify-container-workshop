@@ -32,150 +32,29 @@ Click on the **Add permissions** button and select **Attach policies**. Under th
 
 ![CodeCommit Full Access Policy](/images/codecommit-full-access-policy.png)
 
-Our pipeline is now ready to use our newly connected repository.
+Our pipeline is now ready to use our newly connected repository. Let's update our application and push our changes to our CodeCommit repository.
 
-Now that we have our database and API deployed, let's update our frontend to interact with our backend resources. Open the file **pages/index.js** in the Cloud9 IDE and replace it's contents with the following.
+In your Cloud9 IDE, open the file **pages/index.js** and scroll down to line 16. For now, we're just going to make a simple change to test that our pipeline is able to detect the push to the repository and properly build and deploy our application. At the end of line 16, after the closing anchor tag (</a>) add a comma, followed by your name. For example:
 
 ```javascript
-// pages/index.js
-import React from 'react';
-import { Amplify, API, withSSRContext } from 'aws-amplify';
-import Head from 'next/head';
-import awsExports from '../aws-exports';
-
-import styles from '../styles/Home.module.css';
-
-Amplify.configure({ ...awsExports, ssr: true });
-
-const apiName = "<YOUR API NAME HERE>";
-
-export async function getServerSideProps({ req }) {
-  const SSR = withSSRContext({ req });
-  const response = await SSR.API.get(apiName, '/posts');
-
-  return {
-    props: {
-      posts: response
-    }
-  };
-}
-
-export default function Home(props) {
-  const [posts, setPosts] = React.useState(props.posts);
-  
-  async function handleCreatePost(event) {
-    event.preventDefault();
-  
-    const form = new FormData(event.target);
-  
-    try {
-      const options = {
-          body: {
-            id: Date.now(),
-            title: form.get('title'),
-            description: form.get('content')
-          }
-      };
-
-      const response = await API.post(apiName, '/post', options);
-      console.log(response);
-      
-      setPosts([
-        ...posts,
-        response
-      ]);
-  
-    } catch ({ errors }) {
-      console.error(...errors);
-      throw new Error(errors[0].message);
-    }
-  }
-
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Amplify + Next.js</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>Amplify + Next.js</h1>
-
-        <p className={styles.description}>
-          <code className={styles.code}>{posts.length}</code>
-          posts
-        </p>
-
-        <div className={styles.grid}>
-          {posts.map((post) => (
-            <a className={styles.card} href={`/posts/${post.id}`} key={post.id}>
-              <h3>{post.title}</h3>
-              <p>{post.description}</p>
-            </a>
-          ))}
-
-          <div className={styles.card}>
-            <h3 className={styles.title}>New Post</h3>
-            <form onSubmit={handleCreatePost}>
-              <fieldset>
-                <legend>Title</legend>
-                <input
-                  defaultValue={`Today, ${new Date().toLocaleTimeString()}`}
-                  name="title"
-                />
-              </fieldset>
-
-              <fieldset>
-                <legend>Content</legend>
-                <textarea
-                  defaultValue="I built an Amplify app with Next.js!"
-                  name="content"
-                />
-              </fieldset>
-
-              <button type="submit" onSubmit={handleCreatePost}>Create Post</button>
-            </form>
-          </div>
-        </div>
-      </main>
-    </div>
-  );
-}
+Welcome to <a href="https://nextjs.org">Next.js</a>, Brian
 ```
 
-
-# Old Stuff
-
-The single Dockerfile scenario allows you to take an application running in a single Container which has been built with a Dockerfile and deploy it to AWS Fargate with the Amplify CLI.
-
-If you are unfamiliar with using a Dockerfile review the Dockerizing a Node.js web app guide or or add an API with an Amplify-provided template.
-
-A simple Dockerfile example is below, which would start a NodeJS application (index.js) in a built image by copying all the source files and installing dependencies. This example also shows how could can specify environment variables and use the EXPOSE statement for defining your container's communication port.
-
-```docker
-FROM public.ecr.aws/bitnami/node:14.15.1-debian-10-r8
-
-ENV PORT=8080
-EXPOSE 8080
-
-WORKDIR /usr/src/app
-
-COPY package*.json ./
-RUN npm install
-COPY . .
-
-CMD [ "node", "index.js" ]
-```
-
-## Local development and testing
-
-It is recommended to test your application locally first before deploying with amplify push, otherwise your Fargate Task may fail to start if there are application issues such as missing dependencies. With a Single Dockerfile you can do this by navigating to amplify/backend/api/<name>/src and running docker build -t to build and tag your image followed by docker run to launch your container similar to the below example:
+Now, commit your changes and push them to your CodeCommit repository.
 
 ```bash
-cd ./amplify/backend/api/<name>/src
-docker build -t node-app:1.0 .
-docker run -p 8080:8080 -d node-app:1.0
-curl -i localhost:8080  ## Alternatively open in a web browser
+git add .
+git commit -m "updating application"
+git push --set-upstream origin main
 ```
 
-You can also run your application using standard tooling such as running node index.js or python server.py in Node or Python. Once you are satisfied with the Dockerfile and your application code, run amplify push and the amplify/backend/api/<name>/src directory will be bundled for the build pipeline to run and deploy your image to Fargate. At the end of the deployment the endpoint URL will be printed and client configuration files will be updated.
+Return to your application pipeline in CodePipeline and you should soon see the source status update to "In progress".
+
+![Published Application](/images/codepipeline-codecommit.png)
+
+Once the pipeline completes, reload your application's URL and confirm that you can see that your updates have been published.
+
+![Published Application](/images/published-application2.png)
+
+Now that we have our application running through our pipeline on commits and then building and deploying in a serverless container, let's add some additional containers to make our application a little more interesting.
+

@@ -24,13 +24,15 @@ When using containers in the `amplify add hosting` workflow the setup will be la
 > Hosting with Fargate in Amplify is only available in US-East-1 at this time
 
 ## Route53
-Navigate to **Route53** page in AWS Console to find your public domain.
+Navigate to **Route53** page in AWS Console and then click on the **Hosted zones** item on the left-hand side menu. Look for a domain that ends with **awsps.myinstance.com**. This is your public domain for this workshop. Copy the full domain, as we'll need it in the next step.
 
 Now we're ready to add hosting to our application.
 
 ```bash
 amplify add hosting
 ```
+
+The Amplify CLI will now take you through the hosting configurations. When you are prompted to provide the endpoint for your app, enter **nextamplified.** followed by the domain you copied from Route53. Don't forget the the period between nextamplified and the domain you're pasting. For example: **nextamplified.graebel1.blk.awsps.myinstance.com**
 
 ```bash
 A registered domain is required. 
@@ -48,7 +50,7 @@ You can access the following resource attributes as environment variables from y
         STORAGE_DYNAMOCA6A8539_STREAMARN
 ```
 
-We need to update the Dockerfile that was created by Amplify and placed into the root of our project. Open **nextamplified/Dockerfile** and replace the contents with the following.
+We need to update the Dockerfile that was created by Amplify and placed into the root of our project. Open **next-amplified/Dockerfile** and replace the contents with the following.
 
 ```docker
 FROM public.ecr.aws/bitnami/node:14-prod-debian-10
@@ -110,4 +112,10 @@ As you can see, Amplify created a 4 stage pipeline. Let's look a little closer a
 - **Predeploy**: This is an helper stage that Amplify created for us that uses a Lambda function to prepare our container for deployment.
 - **Deploy**: This it the final stage where Codepipeline takes that build artifact from our **Build** stage and actually deploys it in ECS.
 
-With one simple command, Amplify created a complete pipeline to download, build, and deploy our application! While this is great, most teams leverage source control workflows for initiating builds, so let's see how we can improve this pipeline by integrating with a Git repository and start our build and deploy process when a new commit occurs on our Main branch.
+With one simple command, Amplify created a complete pipeline to download, build, and deploy our application! Navigate to the domain that you provided for your hosting configuration, so we can confirm that our application has been published and is working as expected.
+
+![Published Application](/images/published-application1.png)
+
+
+While this is great, most teams leverage source control workflows for initiating builds, so let's see how we can improve this pipeline by integrating with a Git repository and start our build and deploy process when a new commit occurs on our Main branch.
+
